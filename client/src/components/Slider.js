@@ -9,49 +9,43 @@ const Slider = () => {
     return (
         <Fragment>
             <div id="slider" className="carousel slide" data-ride="carousel">
-              
                 <div className="carousel-inner">
-                    <div
-                    className="carousel-item active"
-                    style={{ backgroundImage: `url(${P1})` }}
-                    >
-                        <p className="carousel-caption">Baby Blessing With My Girls</p>
+                    <div className="carousel-item active">
+                        <img src={P1} style={{width:"100%"}} alt="cloudy" />
+                        <div className="caption">Cotton Candy Clouds</div>
                     </div>
-                    <div
-                    className="carousel-item"
-                    style={{ backgroundImage: `url(${P2})` }}
-                    >
-                        <p className="carousel-caption">Girls Night Out</p>
+                    <div className="carousel-item">
+                        <img src={P2} style={{width:"100%"}} alt="lightning" />
+                        <div className="caption">Electric Lightning Strike</div>
                     </div>
-                    <div
-                    className="carousel-item"
-                    style={{ backgroundImage: `url(${P3})` }}
-                    >
-                        <p className="carousel-caption">Fun Day Out By The Dam</p>
+                    <div className="carousel-item">
+                        <img src={P3} style={{width:"100%"}} alt="snow" />
+                        <div className="caption">Frosty Frozen Forest</div>
                     </div>
-                    <div
-                    className="carousel-item"
-                    style={{ backgroundImage: `url(${P4})` }}
-                    >
-                        <p className="carousel-caption">Cerys's Party</p>
+                    <div className="carousel-item">
+                        <img src={P4} style={{width:"100%"}} alt="sunny" />
+                        <div className="caption">Blissful Summer Sunset</div>
                     </div>
-                    <div
-                    className="carousel-item"
-                    style={{ backgroundImage: `url(${P5})` }}
-                    >
-                        <p className="carousel-caption">Farewell Breakfast For Pauline</p>
+                    <div className="carousel-item">
+                        <img src={P5} style={{width:"100%"}} alt="rain" />
+                        <div className="caption">Refreshing Rainy Day</div>
                     </div>
                 </div>
 
-                <a className="carousel-control-prev" href="#slider" data-slide="prev">
-                <span className="carousel-control-prev-icon">
-                </span>
-                
+                    
+                <a className="carousel-control-prev" data-slide="prev" href="#slider">
+                    <span className="carousel-control-prev-icon tooltip">
+                        <p className="tooltipText">Previous Slide</p>
+                    </span>
+                        
                 </a>
-                <a className="carousel-control-next" href="#slider" data-slide="next">
-                <span className="carousel-control-next-icon"></span>
+                <a className="carousel-control-next" data-slide="next"  href="#slider">
+                    <span className="carousel-control-prev-icon tooltip">
+                        <p className="tooltipText">Next Slide</p>
+                    </span>
+                        
                 </a>
-            </div>
+            </div>    
         </Fragment>
     )
 }

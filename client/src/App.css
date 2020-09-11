@@ -7,7 +7,7 @@
 }
 
 /* heading */
-/* h1,
+h1,
 h2,
 h3 {
   font: normal normal 100 14px "Karla", sans-serif;
@@ -26,10 +26,8 @@ h3 {
   font-size: 160%;
 }
 
-img {
-  max-width: 100%;
-  height: auto;
-  border: 0;
+a {
+  text-decoration: none;
 }
 
 p {
@@ -38,31 +36,63 @@ p {
   font-weight: 400;
   line-height: 23px;
   color: #515151;
-} */
+}
 
 /* Slider */
-
 .carousel-item {
   height: 100vh;
   min-height: 350px;
   background: no-repeat center center scroll;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  
 }
 
-/* On smaller screens, decrease text size */
-@media only screen and (max-width: 300px) {
-  .carousel-control-prev, .carousel-control-next, .text {font-size: 11px};
-  .carousel-item {width: 100%};
+img {
+  vertical-align: middle;
+}
+
+.container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+.caption {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
 }
 
 .tooltip {
   position: relative;
   display: inline-block;
-  border-bottom: 1px dotted black;
+  
 }
 
 .tooltip .tooltipText {
@@ -93,21 +123,14 @@ p {
   border-color: #555 transparent transparent transparent;
 }
 
-.tooltip:hover .toolTiptext {
+.tooltip:hover .tooltipText {
   visibility: visible;
   opacity: 1;
 }
 
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
 /* Slider */
 
-.carousel-caption {
-  width: 100%;
-  padding: 2%;
-  left: 0;
-  bottom: 0;
-  background: rgba(0,0,0,.5);
-  color: #fff;
-  text-shadow: 0 -1px 0 rgba(0,0,0,.3);
-  font-size: 14px;
-  line-height: 18px;
-}
+

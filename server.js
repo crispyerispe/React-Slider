@@ -2,7 +2,7 @@ const express = require("express");
 const connectDB = require("./config/db");
 const path = require("path");
 const auth = require("./middleware/auth");
-const imgRoute = require('./routes/image');
+const imgRoute = require("./routes/image");
 
 
 const app = express();
@@ -12,17 +12,17 @@ connectDB();
 
 // Init Middleware
 app.use(express.json({ extended: false }));
-app.use('/api/images', imgRoute);
+app.use("/api/images", imgRoute);
 
 
 // Define Routes
 
+app.use("/images", express.static(path.join(__dirname, "images")));
 
-
-// app.use(express.static(path.join(__dirname, "client/build")));
-// app.get("/", (req, res) => {
-//   res.sendFile(path.join(`${__dirname}/client/build/index.html`));
-// });
+app.use(express.static(path.join(__dirname, "client/build")));
+app.get("/", (req, res) => {
+  res.sendFile(path.join(`${__dirname}/client/build/index.html`));
+});
 
 app.get("/", (req, res) => res.json({ msg: "Welcome" }));
 
